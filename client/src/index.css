@@ -6,8 +6,8 @@
 
 html {
   font-family: Arial, Helvetica, sans-serif;
-  background: blue;
-  color: whitesmoke;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 body {
