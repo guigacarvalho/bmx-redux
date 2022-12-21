@@ -1,14 +1,15 @@
-import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Map } from '../components/Map'
 import { ParkList } from './ParkList';
+import '../App.css'
 
 export function Home() {
     const location = useLocation()
     return (
     <>
-        <h1>bmxparks.org</h1>
+        <h1 class="header">bmxparks.org</h1>
         <nav class="nav">
-            <ul>
+            <ul class="nav-links">
                 <li>
                     <NavLink to="/">home</NavLink>
                 </li>
