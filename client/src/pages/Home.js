@@ -4,8 +4,10 @@ import { ParkList } from './ParkList';
 export function Home() {
     return (
     <>
-        <Map />
-        <ParkList />
+        <main>
+            <Map />
+            <ParkList />
+        </main>
     </>
     )
 }

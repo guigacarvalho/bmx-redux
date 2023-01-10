@@ -1,3 +1,3 @@
 export function ParkList() {
-    return <h1>Park List</h1>
+    return <h2>Park List</h2>
 }

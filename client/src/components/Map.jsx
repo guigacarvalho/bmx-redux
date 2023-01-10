@@ -2,6 +2,6 @@
 
 export function Map() {
   return (
-    <div>map</div>
+    <h2>map</h2>
   )
 }
