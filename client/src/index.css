@@ -96,8 +96,13 @@ form {
   list-style-type: none;
 }
 
+.header-link {
+  color: purple;
+  align-items: baseline;
+}
+
 li {
-  margin: 25px;
+  margin-left: 1.5rem;
 }
 
 a:link {

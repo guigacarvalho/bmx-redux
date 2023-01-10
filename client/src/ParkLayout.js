@@ -5,7 +5,7 @@ export function ParkLayout() {
     const number = searchParams.get("n")
     return (
         <>
-            <h1>Park List</h1>
+            <h2>Park List</h2>
             <Link to="/parks/1">Park 1</Link>
             <br />
             <Link to="/parks/2">Park 2</Link>

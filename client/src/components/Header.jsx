@@ -11,10 +11,10 @@ const Header = () => {
             </div>
             <ul class="nav-links">
                 <li>
-                    <Link end to="/addpark">add park</Link>
+                    <Link className='header-link' end to="/addpark">add park</Link>
                 </li>
                 <li>
-                    <Link end to="/logout">log out</Link>
+                    <Link className='header-link' end to="/logout">log out</Link>
                 </li>
             </ul>
         </header>
