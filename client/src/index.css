@@ -47,8 +47,20 @@ article {
   justify-content: space-between;
 }
 
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bmxlogo {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
 h1 {
   font-size: 3.5rem;
+  color: purple;
 }
 
 p {
@@ -83,4 +95,20 @@ form {
 
 li {
   margin: 25px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
