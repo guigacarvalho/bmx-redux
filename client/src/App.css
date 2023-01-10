@@ -1,9 +1,0 @@
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-li {
-  margin: 25px;
-}

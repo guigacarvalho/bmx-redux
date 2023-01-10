@@ -1,18 +1,22 @@
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from "./pages/Home"
 import { ParkRoutes } from './ParkRoutes'
 import { NotFound } from "./pages/NotFound"
-import './App.css'
+
+import Header from './components/Header';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/addpark/*" element={<ParkRoutes />} />
-            <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className='container'>
+          <Header />
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/addpark/*" element={<ParkRoutes />} />
+              <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   );
