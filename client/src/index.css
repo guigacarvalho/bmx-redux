@@ -45,7 +45,7 @@ article {
 
 .header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
@@ -61,8 +61,15 @@ article {
   margin-right: 1rem;
 }
 
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
 .map-container {
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .fakemap {
@@ -84,24 +91,6 @@ p {
 form {
   display: flex;
   flex-direction: column;
-}
-
-.postCredit {
-  font-size: 1rem;
-}
-
-.reactionButton {
-  margin: 0 0.25em 0 0;
-  background: transparent;
-  border: none;
-  color: whitesmoke;
-  font-size: 1rem;
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
 }
 
 .header-link {
