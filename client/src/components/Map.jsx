@@ -1,5 +1,5 @@
 import GoogleMapReact from 'google-map-react'
-import '../map.css'
+import fakemap from '../images/fakemap.jpg'
 
 const location = {
   address: '12257 Kuykendahl Rd, Houston, TX 77067',
@@ -9,6 +9,8 @@ const location = {
 
 export function Map() {
   return (
-    <h2>map</h2>
+    <div className='map-container'>
+      <img src={fakemap} alt='fakemap' className='fakemap'/>
+    </div>
   )
 }
