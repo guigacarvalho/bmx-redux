@@ -13,8 +13,6 @@ function App() {
           <Header />
           <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/addpark/*" element={<ParkRoutes />} />
-              <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>

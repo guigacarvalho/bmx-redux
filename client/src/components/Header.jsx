@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import bmxlogo from '../images/bmxlogo.jpg'
+import AddParkForm from '../components/AddParkForm'
 
 const Header = () => {
 
@@ -11,10 +12,10 @@ const Header = () => {
             </div>
             <ul class="nav-links">
                 <li>
-                    <Link className='header-link' end to="/addpark">add park</Link>
+                    <AddParkForm />
                 </li>
                 <li>
-                    <Link className='header-link' end to="/logout">log out</Link>
+                    <Link className='header-link' end to="/logout"><button>log out</button></Link>
                 </li>
             </ul>
         </header>
