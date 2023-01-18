@@ -28,7 +28,7 @@ const AddParkForm = () => {
           <div className="modal-content">
             <h2>Hello</h2>
             <p>This is a modal</p>
-            <button onClick={toggleModal} className="close-modal">X</button>
+            <button onClick={toggleModal} className="close-modal">x</button>
           </div>
         </div>
       )}

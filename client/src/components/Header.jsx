@@ -15,7 +15,7 @@ const Header = () => {
                     <AddParkForm />
                 </li>
                 <li>
-                    <Link className='header-link' end to="/logout"><button>log out</button></Link>
+                    <Link className='header-link' end to="/logout"><button className='btn'>log out</button></Link>
                 </li>
             </ul>
         </header>
