@@ -1,4 +1,4 @@
-import ParkCard from "./ParkCard"
+import ParkItem from "./ParkItem"
 import ParkContext from "../context/ParkContext"
 import { useContext } from "react"
 
@@ -12,10 +12,10 @@ const ParkList = () => {
 
     return (
         <div className="park-list">
-            {parks.map((card) => (
-                <ParkCard
-                    key={parks.id}
-                    park={park}
+            {parks.map((item) => (
+                <ParkItem
+                    key={item.id}
+                    item={item}
                 />
             ))}
         </div>
