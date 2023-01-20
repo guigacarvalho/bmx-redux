@@ -36,11 +36,19 @@ export const ParkProvider = ({children}) => {
       })
   }
 
+  const updatePark = (id, updItem) => {
+    setPark(park.map((item) => item.id === id ? {
+        ...item, ...updItem
+    } : item))
+  }
+
   return <ParkContext.Provider value={{
     park,
     parkEdit,
+    addPark,
     deletePark,
-    editPark
+    editPark,
+    updatePark
   }}>
     {children}
   </ParkContext.Provider>

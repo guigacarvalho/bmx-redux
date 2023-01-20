@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react"
 import { FaTimes } from 'react-icons/fa'
 import ParkContext from "../context/ParkContext";
@@ -18,25 +18,42 @@ const AddParkForm = () => {
   }
 
   const [text, setText] = useState('')
-  const [btnDisabled, setBtnDisabled] = useState(true)
-  const [message, setMessage] = useState('')
+  const [btnDisabled, setBtnDisabled] = useState(true) 
 
-  // const { parkEdit } = useContext(ParkContext)
+  const { addPark, parkEdit, updatePark } = useContext(ParkContext)
+
+  useEffect(() => {
+    if(parkEdit.edit === true) {
+        setText(parkEdit.item.text)
+    }
+  }, [parkEdit])
 
   const handleTextChange = (e) => {
     if (text === '') {
         setBtnDisabled(true)
-        setMessage(null)
-    } else if (text !== '' && text.trim().length <= 10) {
-        setMessage('Text must be at least 10 characters')
-        setBtnDisabled(true)
     } else {
-        setMessage(null)
         setBtnDisabled(false)
     }
 
     setText(e.target.value)
-}
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if(text.trim().length > 10) {
+        const newPark = {
+            text
+        }
+
+        if(parkEdit.edit === true) {
+            updatePark(parkEdit.item.id, newPark)
+        } else {
+            addPark(newPark)
+        }
+
+        setText('')
+    }
+  }
   
   return (
     <>
@@ -48,28 +65,34 @@ const AddParkForm = () => {
         <div className="modal">
           <div className="overlay" onClick={toggleModal}></div>
           <div className="modal-content">
-            <form>
+            <form onSubmit={handleSubmit}>
               <h2>New Park</h2>
               <div className="input-group">
                 <label>park name</label>
                 <input 
+                  onChange={handleTextChange}
                   type="text" 
                   placeholder="park name"
+                  value={text}
                 />
                 <br />
                 <label>park address</label>
                 <input 
+                  onChange={handleTextChange}
                   type="text" 
                   placeholder="park address"
+                  value={text}
                 />
                 <br />
                 <label>park type</label>
                 <input 
+                  onChange={handleTextChange}
                   type="text" 
                   placeholder="park type"
+                  value={text}
                 />
                 <br />
-                <button type="submit">Add Park</button>
+                <button type="submit" isDisabled={btnDisabled}>Add Park</button>
               </div>
             </form>
             <button onClick={toggleModal} className="close-modal">
