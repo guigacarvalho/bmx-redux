@@ -9,7 +9,8 @@ export const ParkProvider = ({children}) => {
     {
         id: 1,
         name: 'Rockstar Energy Bike Park',
-        address: '12257 Kukendahl Rd, Houston, TX 77067'
+        address: '12257 Kukendahl Rd, Houston, TX 77067',
+        type: 'dirt, race, street'
     }
   ])
 

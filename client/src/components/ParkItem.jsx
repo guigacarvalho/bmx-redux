@@ -17,6 +17,7 @@ const ParkItem = ({ item }) => {
       </button>
       <div className="park-info">{item.name}</div>
       <div className="park-info">{item.address}</div>
+      <div className="park-info">{item.type}</div>
     </>
     
   )
