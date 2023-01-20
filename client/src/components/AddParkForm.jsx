@@ -69,6 +69,7 @@ const AddParkForm = () => {
               <h2>New Park</h2>
               <div className="input-group">
                 <label>park name</label>
+                <br />
                 <input 
                   onChange={handleTextChange}
                   type="text" 
@@ -77,6 +78,7 @@ const AddParkForm = () => {
                 />
                 <br />
                 <label>park address</label>
+                <br />
                 <input 
                   onChange={handleTextChange}
                   type="text" 
@@ -85,6 +87,7 @@ const AddParkForm = () => {
                 />
                 <br />
                 <label>park type</label>
+                <br />
                 <input 
                   onChange={handleTextChange}
                   type="text" 
