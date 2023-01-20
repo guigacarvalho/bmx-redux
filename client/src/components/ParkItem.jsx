@@ -1,10 +1,10 @@
-import { useContext } from "react"
-import PropTypes from "prop-types"
-import ParkContext from "../context/ParkContext"
+// import { useContext } from "react"
+// import PropTypes from "prop-types"
+// import ParkContext from "../context/ParkContext"
 
 const ParkItem = ({ item }) => {
 
-  const { deletePark, editPark } = useContext(ParkContext)
+  // const { deletePark, editPark } = useContext(ParkContext)
 
   return (
     <>

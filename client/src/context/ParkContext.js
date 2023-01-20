@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid'
 import { createContext, useState } from "react"
 
 const ParkContext = createContext()
@@ -16,6 +17,11 @@ export const ParkProvider = ({children}) => {
     item: {},
     edit: false
   })
+
+  const addPark = (newPark) => {
+    newPark.id = uuidv4()
+    setPark([newPark, ...park])
+  }
 
   const deletePark = (id) => {
     if(window.confirm('Are you sure you want to delete?')) {

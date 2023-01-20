@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import { useState } from "react"
 import { FaTimes } from 'react-icons/fa'
+import ParkContext from "../context/ParkContext";
 
 const AddParkForm = () => {
 
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(false)
 
   const toggleModal = () => {
     setModal(!modal)
@@ -14,6 +16,27 @@ const AddParkForm = () => {
   } else {
     document.body.classList.remove('active-modal')
   }
+
+  const [text, setText] = useState('')
+  const [btnDisabled, setBtnDisabled] = useState(true)
+  const [message, setMessage] = useState('')
+
+  // const { parkEdit } = useContext(ParkContext)
+
+  const handleTextChange = (e) => {
+    if (text === '') {
+        setBtnDisabled(true)
+        setMessage(null)
+    } else if (text !== '' && text.trim().length <= 10) {
+        setMessage('Text must be at least 10 characters')
+        setBtnDisabled(true)
+    } else {
+        setMessage(null)
+        setBtnDisabled(false)
+    }
+
+    setText(e.target.value)
+}
   
   return (
     <>
